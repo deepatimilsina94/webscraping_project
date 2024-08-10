@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS divisions (
 )
 ''')
 
-links = soup.select('.footer-list li a')
+links = soup.find_all('a', class_='footer_list')
 
 for link in links:
     title = link.text.strip()  
